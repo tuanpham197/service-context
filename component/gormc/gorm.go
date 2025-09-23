@@ -106,12 +106,13 @@ func (gdb *gormDB) Activate(_ sctx.ServiceContext) error {
 	}
 
 	gdb.logger.Info("Connecting to database...")
+	gdb.logger.Info("GormDBType: ", dbType)
 
 	var err error
 	gdb.db, err = gdb.getDBConn(dbType)
 
 	if err != nil {
-		gdb.logger.Error("Cannot connect to database", err.Error())
+		gdb.logger.Error("Cannot connect to database ", err.Error())
 		return err
 	}
 
