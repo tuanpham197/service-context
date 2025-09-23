@@ -67,7 +67,7 @@ func (gdb *gormDB) InitFlags() {
 	flag.StringVar(
 		&gdb.dbType,
 		fmt.Sprintf("%sdb-driver", prefix),
-		"mysql",
+		"postgres",
 		"Database driver (mysql, postgres, sqlite, mssql) - Default mysql",
 	)
 
@@ -100,16 +100,13 @@ func (gdb *gormDB) isDisabled() bool {
 func (gdb *gormDB) Activate(_ sctx.ServiceContext) error {
 	gdb.logger = sctx.GlobalLogger().GetLogger(gdb.id)
 
-	dbType := GormDBTypePostgres
+	dbType := getDBType(gdb.dbType)
 	if dbType == GormDBTypeNotSupported {
 		return errors.WithStack(errors.New("Database type not supported."))
 	}
 
 	gdb.logger.Info("Connecting to database...")
 	gdb.logger.Info("GormDBType: ", dbType)
-	gdb.logger.Info("GormID: ", gdb.id)
-	gdb.logger.Info("GormDSN: ", gdb.dsn)
-	gdb.logger.Info("GormDSN: ", new(GormOpt))
 
 	var err error
 	gdb.db, err = gdb.getDBConn(dbType)
