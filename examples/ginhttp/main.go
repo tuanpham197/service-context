@@ -3,15 +3,16 @@ package main
 import (
 	"context"
 	"fmt"
-	"github.com/gin-gonic/gin"
-	sctx "github.com/viettranx/service-context"
-	"github.com/viettranx/service-context/component/ginc"
 	"log"
 	"net/http"
 	"os"
 	"os/signal"
 	"syscall"
 	"time"
+
+	"github.com/gin-gonic/gin"
+	sctx "github.com/tuanpham197/service-context"
+	"github.com/tuanpham197/service-context/component/ginc"
 )
 
 type GINComponent interface {

@@ -1,6 +1,6 @@
 package core
 
-import sctx "github.com/viettranx/service-context"
+import sctx "github.com/tuanpham197/service-context"
 
 func Recover() {
 	if r := recover(); r != nil {

@@ -4,10 +4,11 @@ import (
 	"context"
 	"flag"
 	"fmt"
+	"time"
+
 	"github.com/golang-jwt/jwt/v5"
 	"github.com/pkg/errors"
-	sctx "github.com/viettranx/service-context"
-	"time"
+	sctx "github.com/tuanpham197/service-context"
 )
 
 const (

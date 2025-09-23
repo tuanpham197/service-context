@@ -2,8 +2,9 @@ package ginc
 
 import (
 	"flag"
+
 	"github.com/gin-gonic/gin"
-	sctx "github.com/viettranx/service-context"
+	sctx "github.com/tuanpham197/service-context"
 )
 
 const (

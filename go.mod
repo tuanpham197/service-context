@@ -1,6 +1,6 @@
-module github.com/viettranx/service-context
+module github.com/tuanpham197/service-context
 
-go 1.19
+go 1.25
 
 require (
 	github.com/btcsuite/btcutil v1.0.2

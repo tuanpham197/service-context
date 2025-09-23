@@ -1,9 +1,10 @@
 package middleware
 
 import (
-	"github.com/gin-gonic/gin"
-	sctx "github.com/viettranx/service-context"
 	"net/http"
+
+	"github.com/gin-gonic/gin"
+	sctx "github.com/tuanpham197/service-context"
 )
 
 type CanGetStatusCode interface {

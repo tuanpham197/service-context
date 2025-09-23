@@ -1,8 +1,9 @@
 package main
 
 import (
-	"github.com/viettranx/service-context"
 	"log"
+
+	sctx "github.com/tuanpham197/service-context"
 )
 
 func main() {

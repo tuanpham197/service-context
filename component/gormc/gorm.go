@@ -3,13 +3,14 @@ package gormc
 import (
 	"flag"
 	"fmt"
-	"github.com/pkg/errors"
-	sctx "github.com/viettranx/service-context"
-	"github.com/viettranx/service-context/component/gormc/dialets"
-	"gorm.io/gorm"
-	"gorm.io/gorm/logger"
 	"strings"
 	"time"
+
+	"github.com/pkg/errors"
+	sctx "github.com/tuanpham197/service-context"
+	"github.com/tuanpham197/service-context/component/gormc/dialets"
+	"gorm.io/gorm"
+	"gorm.io/gorm/logger"
 )
 
 type GormDBType int

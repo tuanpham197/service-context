@@ -2,12 +2,13 @@ package cmd
 
 import (
 	"fmt"
-	"github.com/gin-gonic/gin"
-	"github.com/spf13/cobra"
-	sctx "github.com/viettranx/service-context"
-	"github.com/viettranx/service-context/component/ginc"
 	"log"
 	"os"
+
+	"github.com/gin-gonic/gin"
+	"github.com/spf13/cobra"
+	sctx "github.com/tuanpham197/service-context"
+	"github.com/tuanpham197/service-context/component/ginc"
 )
 
 func newServiceCtx() sctx.ServiceContext {
