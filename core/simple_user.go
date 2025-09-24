@@ -1,5 +1,7 @@
 package core
 
+import "github.com/google/uuid"
+
 // SimpleUser only contains public infos
 type SimpleUser struct {
 	SQLModel
@@ -12,7 +14,7 @@ func (SimpleUser) TableName() string {
 	return "users"
 }
 
-func NewSimpleUser(id int, firstName, lastName string, avatar *Image) SimpleUser {
+func NewSimpleUser(id uuid.UUID, firstName, lastName string, avatar *Image) SimpleUser {
 	return SimpleUser{
 		SQLModel:  SQLModel{Id: id},
 		LastName:  lastName,
